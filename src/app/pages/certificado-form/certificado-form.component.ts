@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { PrimaryButtonComponent } from "../../_components/primary-button/primary-button.component";
 import { SecondaryButtonComponent } from "../../_components/secondary-button/secondary-button.component";
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Certificado } from '../../Interfaces/certificados';
 import { CertificadoService } from '../../_services/certificado.service';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-certificado-form',
@@ -13,9 +14,11 @@ import { CertificadoService } from '../../_services/certificado.service';
   styleUrl: './certificado-form.component.css'
 })
 export class CertificadoFormComponent {
-  constructor(private certificadoService: CertificadoService){}
+  constructor(private certificadoService: CertificadoService) { }
+  @ViewChild('form') form!: NgForm
 
   certificado: Certificado = {
+    id: '',
     atividades: [],
     nome: '',
     dataEmissao: ''
@@ -31,6 +34,9 @@ export class CertificadoFormComponent {
   }
 
   adicionarAtividade() {
+    if (this.atividade.length == 0) {
+      return;
+    }
     this.certificado.atividades.push(this.atividade);
     this.atividade = '';
   }
@@ -40,11 +46,15 @@ export class CertificadoFormComponent {
   }
 
   submit() {
-    if(!this.formValido()) {
+    if (!this.formValido()) {
       return;
     }
     this.certificado.dataEmissao = this.dataAtual();
+    this.certificado.id = uuidv4();
     this.certificadoService.adicionarCertificado(this.certificado);
+
+    this.certificado = this.estadoInicialCertificado();
+    this.form.resetForm();
   }
 
   dataAtual() {
@@ -55,5 +65,14 @@ export class CertificadoFormComponent {
 
     const dataFormatada = `${dia}/${mes}/${ano}`;
     return dataFormatada;
+  }
+
+  estadoInicialCertificado(): Certificado {
+    return {
+      id: '',
+      atividades: [],
+      nome: '',
+      dataEmissao: ''
+    };
   }
 }
