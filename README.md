@@ -1,59 +1,79 @@
-# GeradorCertificado
+# 📜 Gerador de Certificados
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+Aplicação desenvolvida em **Angular** como projeto prático do **Curso de Extensão em Angular** da Faculdade de Tecnologia Rocketseat.
 
-## Development server
+O sistema permite gerar certificados personalizados de forma dinâmica, preenchendo os dados do participante e exportando o certificado em imagem.
 
-To start a local development server, run:
+## 🚀 Demonstração
+
+🔗 Projeto online: https://resilient-capybara-bf769c.netlify.app
+
+## ✨ Funcionalidades
+
+- Cadastro das informações do participante
+- Geração dinâmica do certificado
+- Download do certificado em imagem
+- Navegação entre páginas utilizando Angular Router
+- Interface responsiva
+
+## 🛠️ Tecnologias utilizadas
+
+- Angular
+- TypeScript
+- Bootstrap
+- Angular Forms
+- Angular Router
+- html2canvas
+- RxJS
+
+## 📦 Como executar o projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/YaraYM/gerador-de-certificados.git
+```
+
+Acesse a pasta:
+
+```bash
+cd gerador-de-certificados
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois acesse:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📚 Aprendizados
 
-```bash
-ng generate --help
-```
+Durante o desenvolvimento deste projeto foram aplicados conceitos como:
 
-## Building
+- Componentes
+- Roteamento
+- Formulários com Angular Forms
+- Data Binding
+- Diretivas
+- Injeção de Dependência
+- Organização de componentes
+- Exportação de conteúdo utilizando html2canvas
 
-To build the project run:
+## 👩‍💻 Autora
 
-```bash
-ng build
-```
+Desenvolvido por **Yara Yamanaka Marques**
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- LinkedIn: https://www.linkedin.com/in/SEU-LINK
+- GitHub: https://github.com/YaraYM
