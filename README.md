@@ -75,5 +75,5 @@ Durante o desenvolvimento deste projeto foram aplicados conceitos como:
 
 Desenvolvido por **Yara Yamanaka Marques**
 
-- LinkedIn: https://www.linkedin.com/in/SEU-LINK
+- LinkedIn: https://www.linkedin.com/in/yara-yamanaka-marques/
 - GitHub: https://github.com/YaraYM
